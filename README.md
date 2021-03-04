@@ -6,6 +6,14 @@ Spliting webpack configuration for development and production.
 - dev : `./config/dev.js`
 - production: `./config/prod.js`
 
+## Skills
+
+- react
+- webpack
+- jest
+- @testing-library/react
+- babel
+
 ## Branch
 
 - `js-setting`: javascript environment
