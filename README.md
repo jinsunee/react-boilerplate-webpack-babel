@@ -1,6 +1,6 @@
 # react-boilerplate-webpack-babel
 
-Spliting webpack configuration for development and production.
+Splitting webpack configuration for development and production.
 
 - common : `./config/common.js`
 - dev : `./config/dev.js`
