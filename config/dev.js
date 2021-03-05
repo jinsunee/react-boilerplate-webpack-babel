@@ -6,7 +6,7 @@ module.exports = merge(common, {
     mode: 'development',
     plugins: [new webpack.HotModuleReplacementPlugin()],
     devServer: {
-        contentBase: './dist',
+        contentBase: './build',
         hot: true
     }
     // devtool: 'cheap-module-eval-source-map'
