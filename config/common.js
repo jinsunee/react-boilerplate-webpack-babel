@@ -2,23 +2,28 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+const SRC = path.resolve(__dirname, '../src');
+const PUBLIC = path.resolve(__dirname, '../public');
+const BUILD = path.resolve(__dirname, '../build');
+
 module.exports = {
     entry: {
         app: './src/index.js'
     },
     output: {
         filename: 'bundle.js',
-        path: path.resolve(__dirname, '../build')
+        path: BUILD
     },
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, '../public') + '/index.html',
+            template: PUBLIC + '/index.html',
             filename: './index.html'
         })
     ],
     resolve: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx']
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+        modules: [SRC, './node_modules']
     },
     module: {
         rules: [
